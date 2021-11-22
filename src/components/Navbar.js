@@ -1,29 +1,16 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom';
-import { Button } from './Button';
 import './Navbar.css'
 import banner from './pages/imgs/hospihor.jpg'
 
 function Navbar() {
     const [click, setClick] = useState(false);
-    const [button, setbutton] =useState(true);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    const showButton = () => {
-        if(window.innerWidth <= 960){
-            setbutton(false)
-        } else {
-            setbutton(true)
-        }
-    };
-
-    useEffect(()=>{
-        showButton()
-    }, []);
 
 
-    window.addEventListener('resize', showButton);
+    window.addEventListener('resize');
     return (
         <>
          <nav className="navbar">
