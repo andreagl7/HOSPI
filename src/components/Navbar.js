@@ -56,7 +56,7 @@ function Navbar() {
                         </Link>
                     </li>
                 </ul>
-                
+                {button && <Button></Button>}
             </div> 
          </nav>     
         </>
